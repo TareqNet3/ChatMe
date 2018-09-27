@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Chat Me";
+}
+<br />
+<br />
+<div class="row">
+    <div class="col-sm-4">
+        <h4>Firends</h4>
+        <div class="col-inside-lg decor-default">
+            <div class="chat-body">
+                <div id="chat-messages">
+                    <div id="FriendsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="col-inside-lg decor-default">
+            <div class="chat-body">
+                <div id="chat-messages">
+                    <div id="Timeline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="Message" class="col-sm-1 control-label">Message</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="Message" placeholder="Message" autofocus></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <button type="button" id="Send" class="btn btn-default">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+    {
+    <script src="~/lib/signalr/signalr.js"></script>
+    <script src="~/js/signalr-app.js" asp-append-version="true"></script>
+}
